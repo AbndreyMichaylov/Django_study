@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block penis %}
+    search
+{% endblock penis %}
+
+
+{% block content %}
+<form action="/search/" method="GET">
+    <input type="text" name="q">
+    <input type="submit" value="Найти">
+</form>
+
+{% for book in books %}
+    <p>{{ book.publisher }}</p>
+{% endfor %}
+    
+{{ query }}
+{% endblock content %}
+    
+    
